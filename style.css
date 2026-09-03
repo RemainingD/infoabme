@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Biryani", sans-serif;
+}
+
+/* Слайдер */
+.slider {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slides {
+    display: flex;
+    width: 600%; /* Ширина для 6 слайдов (6 * 100%) */
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.slide {
+    width: 600px;
+    height: 400px;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Радиокнопки скрыты */
+input[type=radio] {
+    display: none;
+}
+
+/* Логика переключения слайдов */
+#s1:checked ~ .slides { margin-left: 0; }
+#s2:checked ~ .slides { margin-left: -100%; }
+#s3:checked ~ .slides { margin-left: -200%; }
+#s4:checked ~ .slides { margin-left: -300%; }
+#s5:checked ~ .slides { margin-left: -400%; }
+#s6:checked ~ .slides { margin-left: -500%; }
+
+/* Точки навигации */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.dots label {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+/* Подсветка активной точки */
+#s1:checked ~ .dots label[for=s1],
+#s2:checked ~ .dots label[for=s2],
+#s3:checked ~ .dots label[for=s3],
+#s4:checked ~ .dots label[for=s4],
+#s5:checked ~ .dots label[for=s5],
+#s6:checked ~ .dots label[for=s6] {
+    opacity: 1;
+}
+
+/* Остальные стили страницы */
+.page {
+    width: 100%;
+}
+.cite {
+    width: 1440px;
+    height: 2765px;
+    margin: auto;
+}
+.header {
+    width: 1440px;
+    height: 480px;
+    background: #6256B8;
+}
+.center1 {
+    width: 1440px;
+    height: 580px;
+}
+.center2 {
+    background-color: #C7B9F3;
+    width: 1440px;
+    height: 650px;
+    position: relative;
+}
+.center3 {266830
+    width: 1440px;
+    height: 807px;
+    display: grid;
+}
+.footer {
+    display: flex;
+    background-color: #46407D;
+    width: 1440px;
+    height: 250px;
+    justify-content: space-around;
+}
+.kot {
+    margin-left: 420px;
+    margin-top: 90px;
+
+}
+.nachalo {
+    width: 100%;
+    height: 50px;
+    background: #46407D;
+}
+.txtnachalo {
+    width: 420px;
+    height: 50px;
+    margin-left: 722px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 55px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.hello {
+    width: 275px;
+    height: 200px;
+    font-size: 120px;
+    margin: 40px 0px 0px 325px;
+}
+.about {
+    width: 680px;
+    height: 405px;
+    margin: auto;
+    padding-top: 65px;
+}
+.in_about {
+    width: 100%;
+    height: 252px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.b1 {
+    width: 175px;
+    height: 170px;
+    border-radius: 100px;
+    background: #6256B8;
+}
+.b2 {
+    width: 416px;
+    height: 252px;
+}
+.d1 {
+    width: 205px;
+    height: 250px;
+}
+.d2 {
+    width: 125px;
+    height: 250px;
+}
+.d3 {
+    width: 117px;
+    height: 250px;
+}
+.ee {
+    width: 1440px;
+    height: 575px;
+    display: flex;
+    background: #C1C1FF;
+    margin-top: 116px;
+    justify-content: space-around;
+}
+.eer1 {
+    border: 2px solid #808BFF;
+    margin-top: 125px;
+    width: 360px;
+    height: 390px;
+    border-radius: 60px;
+    background: #F1D1F4;
+}
+.eer2 {
+    border: 2px solid #808BFF;
+    margin-top: 125px;
+    width: 360px;
+    height: 390px;
+    border-radius: 60px;
+    background: #A6E8E2;
+}
+.eer3 {
+    border: 2px solid #808BFF;
+    margin-top: 125px;
+    width: 360px;
+    height: 390px;
+    border-radius: 60px;
+    background: #D5F9B9;
+}
