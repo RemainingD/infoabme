@@ -1,129 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Zaphkiel</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="theme-color" content="#2B2656">
+  <title>Дамир — веб-программист и дизайнер</title>
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="page">
-    <div class="cite">
-      <div class="header">
-        <div class="nachalo">
-          <div class="txtnachalo">
-            <p style="text-decoration: underline; color: white; font-weight: bold; filter: drop-shadow(black 1px 2px 10px);">HOME</p>
-            <p style="font-weight: bold; filter: drop-shadow(black 1px 2px 10px)"><a href="#">ABOUT</a></p>
-            <p style="font-weight: bold; filter: drop-shadow(black 1px 2px 10px)"><a href="#">SKILLS</a></p>
-            <p style="font-weight: bold; filter: drop-shadow(black 1px 2px 10px)"><a href="#">MY WAY</a></p>
-            <p style="font-weight: bold; filter: drop-shadow(black 1px 2px 10px)"><a href="#">CONTACT</a></p>
-          </div>
-          <img src="uo.png" style="position: absolute; width: 285px; height: 285px; margin-left: 791px; margin-top: 60px;">
-        </div>
-        <div class="hello">
-          <p style="height: 94px; margin-bottom: 10px; font-weight: bold; color: white; filter: drop-shadow(black 1px 2px 20px)">HE</p>
-          <p style="font-weight: bold; color: white; filter: drop-shadow(black 1px 2px 20px)">LLO!</p>
-        </div>
-        <p style="transform: rotate(-90deg); position: absolute; font-size: 10px; top:390px; left: 350px; color: white;"><--- Scroll down </p>
-      </div>
 
-      <div class="center1">
-        <div class="about">
-          <p style="font-weight: bold; font-size: 25px; text-align: center; text-decoration: underline;">ABOUT</p>
-          <div class="in_about">
-            <div class="b1">
-              <img src="FFF.png" style="width: 155px; height: 155px; border-radius: 100px; margin-top: 8px; margin-left: 10px;">
-            </div>
-            <div class="b2">
-              <p style="color: #5361FF; font-size: 25px; font-weight: bold;">Damir</p>
-              <p style="font-size: 12px; margin-top: 5px;">Web programmer and designer</p>
-              <p style="font-size: 12px; margin-top: 10px; text-align: left;">Привет! Меня зовут Дамир, мне 16 лет. Я волейболист, кандидат в мастера спорта, и начинающий программист. Прошёл обучение в CyberSchool, где получил крепкую базу в IT. Сейчас занимаюсь веб-разработкой: создаю сайты с нуля, от дизайна до запуска. Уверенно работаю с HTML, CSS и JavaScript, делаю адаптивную верстку и использую современные технологии. Люблю учиться новому, развиваться и брать на себя интересные задачи. В спорте и в коде — всегда нацелен на результат.</p>
-            </div>
+  <header class="nav">
+    <div class="wrap">
+      <a href="#home" class="logo">Damir</a>
+      <div class="nav-right">
+        <button class="theme-btn" id="themeBtn" aria-label="Сменить тему">🌙</button>
+        <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="menu"><span></span></button>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#way">My Way</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div>
+          <h1 class="hello"><span>HE</span><span>LLO!</span></h1>
+          <p class="hero-sub">Я Дамир. Делаю сайты от дизайна до запуска.</p>
+          <div class="hero-btns">
+            <a class="btn btn-light" href="#skills">Мои достижения</a>
+            <a class="btn btn-line" href="#about">Обо мне</a>
           </div>
         </div>
+        <div class="hero-photo"><img src="uo.png" alt="Дамир на берегу моря на закате"></div>
       </div>
+    </section>
 
-      <div class="center2">
-        <p style="font-size: 25px; color: black; text-align: center; text-decoration: underline; padding-top: 35px;">My Achievements/skills</p>
-        <div class="kot">
-          <div class="slider">
-            <!-- 6 радиокнопок -->
-            <input type="radio" name="slider" id="s1" checked>
-            <input type="radio" name="slider" id="s2">
-            <input type="radio" name="slider" id="s3">
-            <input type="radio" name="slider" id="s4">
-            <input type="radio" name="slider" id="s5">
-            <input type="radio" name="slider" id="s6">
-
-            <!-- 6 слайдов -->
-            <div class="slides">
-              <div class="slide"><img src="kms.png" alt=""></div>
-              <div class="slide"><img src="madaktama.png" alt=""></div>
-              <div class="slide"><img src="qyber.png" alt=""></div>
-              <div class="slide"><img src="rach.png" alt=""></div>
-              <div class="slide"><img src="gram.png" alt=""></div>
-              <div class="slide"><img src="img6.png" alt=""></div>
-            </div>
-
-            <!-- Точки для переключения -->
-            <div class="dots">
-              <label for="s1" style="background: black;"></label>
-              <label for="s2" style="background: black;"></label>
-              <label for="s3" style="background: black;"></label>
-              <label for="s4" style="background: black;"></label>
-              <label for="s5" style="background: black;"></label>
-              <label for="s6" style="background: black;"></label>
-            </div>
+    <section class="about" id="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div class="avatar"><img src="FFF.png" alt="Фото Дамира"></div>
+          <div>
+            <p class="name">Damir</p>
+            <p class="role">Web programmer and designer</p>
+            <p class="bio">Привет! Меня зовут Дамир, мне 16 лет. Я волейболист, кандидат в мастера спорта, и начинающий программист. Прошёл обучение в CyberSchool, где получил крепкую базу в IT. Сейчас занимаюсь веб-разработкой: создаю сайты с нуля, от дизайна до запуска. Уверенно работаю с HTML, CSS и JavaScript, делаю адаптивную верстку и использую современные технологии. Люблю учиться новому, развиваться и брать на себя интересные задачи. В спорте и в коде — всегда нацелен на результат.</p>
+            <ul class="facts">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Волейбол</li><li>Адаптивная верстка</li>
+            </ul>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="center3">
-        <div class="ee">
-          <p style="font-weight: bold; font-size: 25px; position: absolute; text-decoration: underline; margin-top: 40px;">My Way</p>
-          <div class="eer1">
-            <img src="ww.png" style="width: 75px; margin: 57px 0 0 39px; position: absolute;">
-            <p style="position: absolute; margin: 75px 0 0 148px; font-weight: bold; font-size: 25px;">Школа и ЕНТ</p>
-            <p style="font-size: 15px; font-weight: bold; width: 301px; margin: 165px 0 0 30px; text-align: left; color: #9F0B0B;">Упорно готовился к ЕНТ, осваивал школьную программу и дополнительные материалы. Сдал экзамен на высокий балл, что стало первой серьезной ступенью к моей цели.</p>
+    <section class="skills" id="skills">
+      <div class="wrap">
+        <h2>My Achievements / skills</h2>
+        <div class="slider">
+          <div class="track" id="track">
+            <figure class="slide"><img src="kms.png" alt="Приказ о присвоении разряда КМС" loading="lazy"><p>Кандидат в мастера спорта по волейболу</p></figure>
+            <figure class="slide"><img src="madaktama.png" alt="Мадақтама за 3 место" loading="lazy"><p>3 место — «Ұлттық мектеп лигасы», волейбол</p></figure>
+            <figure class="slide"><img src="qyber.png" alt="Сертификат Qiber" loading="lazy"><p>Сертификат: курс «Веб-разработчика»</p></figure>
+            <figure class="slide"><img src="rach.png" alt="Медали и конспекты на стене" loading="lazy"><p>Медали и конспекты — спорт и учёба рядом</p></figure>
+            <figure class="slide"><img src="gram.png" alt="Похвальная грамота по информатике" loading="lazy"><p>Похвальная грамота по информатике</p></figure>
           </div>
-          <div class="eer2">
-            <img src="rr.png" style="margin: 20px 0 0  142px; width: 75px;">
-            <p style="font-size:25px; font-weight: bold; text-align: center;">Победа в гранте</p>
-            <p style="font-size: 15px; font-weight: bold; margin: 35px 0 0 40px; width: 280px; justify-content: left; color: #525D8B;">Благодаря своим достижениям (и, возможно, участию в олимпиадах или проектах) получил образовательный грант на обучение по IT-специальности. Это открыло двери к высшему образованию.</p>
+          <div class="arrows">
+            <button class="arrow" id="prev" aria-label="Назад">&#8249;</button>
+            <button class="arrow" id="next" aria-label="Вперёд">&#8250;</button>
           </div>
-          <div class="eer3">
-            <p style="font-size:25px; font-weight: bold; text-align: center; padding-top: 50px;">Старт в Астане</p>
-            <img src="qq.png" style="width: 256px; margin: 0 0 0 48px;">
-            <p style="font-size: 15px; font-weight: bold; justify-content: left; width: 248px; margin: 10px 0 0 32px; color: #266830;">Переехал в столицу и успешно начал учебу в университете. Новая среда, новые знания, новые знакомства и отличные возможности для развития в сфере ИИ и веб-разработки.</p>
-          </div>
-        </div><p style="position: absolute; margin: 750px 0 0 590px;">сайт будет продолжать обновлятся</p>
+        </div>
       </div>
+    </section>
 
-      <div class="footer">
-        <div class="d1">
-          <p style="margin-top: 70px; font-size: 25px; color: white; font-weight: bold;">Damir</p>
-          <p style="font-size: 13px; color: #A8A8A8; margin-top: 20px;">im damir and its my personal web page</p>
+    <section class="way" id="way">
+      <div class="wrap">
+        <h2>My Way</h2>
+        <div class="cards">
+          <article class="card c1">
+            <img src="ww.png" alt="">
+            <h3>Школа и ЕНТ</h3>
+            <p>Упорно готовился к ЕНТ, осваивал школьную программу и дополнительные материалы. Сдал экзамен на высокий балл, что стало первой серьезной ступенью к моей цели.</p>
+          </article>
+          <article class="card c2">
+            <img src="rr.png" alt="">
+            <h3>Победа в гранте</h3>
+            <p>Благодаря своим достижениям (и, возможно, участию в олимпиадах или проектах) получил образовательный грант на обучение по IT-специальности. Это открыло двери к высшему образованию.</p>
+          </article>
+          <article class="card c3">
+            <img src="qq.png" alt="">
+            <h3>Старт в Астане</h3>
+            <p>Переехал в столицу и успешно начал учебу в университете. Новая среда, новые знания, новые знакомства и отличные возможности для развития в сфере ИИ и веб-разработки.</p>
+          </article>
         </div>
-        <div class="d2">
-          <p style="font-weight: bold; font-size: 25px; margin-top: 55px; color: white;">EXPLORE</p>
-          <p style="font-size: 15px; font-weight: bold;"><a href="#" style="color: #A8A8A8;">HOME</a></p>
+        <p class="note">Сайт будет продолжать обновляться</p>
+      </div>
+    </section>
 
-
-          <p style="font-size: 15px; font-weight: bold;"><a href="#" style="color: #A8A8A8;">ABOUT</a></p>
-          <p style="font-size: 15px; font-weight: bold;"><a href="#" style="color: #A8A8A8;">My Way</a></p>
-          <p style="font-size: 15px; font-weight: bold;"><a href="#" style="color: #A8A8A8;">CONTACT</a></p>
-        </div>
-        <div class="d3">
-          <p style="margin-top: 70px; font-size: 25px; font-weight: bold; color: white;">FOLLOW</p>
-          <a href="https://www.tiktok.com/@zzaphkiel12?_r=1&_t=ZS-999NdjxcYtR">
-            <img src="tt.png" style="width: 25px; height: 25px; margin-top: 10px; margin-left: 46px;">
+    <section class="projects" id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div class="proj-grid">
+          <a class="proj" href="kriimfirm.html">
+            <h3>Kriimfirm</h3>
+            <p>Учебный проект: адаптивная страница, сверстанная с нуля по макету.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+            <span class="go">Открыть &rarr;</span>
           </a>
+          <a class="proj" href="#home">
+            <h3>Этот сайт</h3>
+            <p>Личная страница с портфолио: слайдер достижений, тёмная тема и форма связи.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <span class="go">Наверх &rarr;</span>
+          </a>
+          <div class="proj soon">
+            <h3>Следующий проект</h3>
+            <p>Здесь появятся новые работы. Сайт будет обновляться.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Напиши мне, и я отвечу.</p>
+        <form class="form" id="contactForm" novalidate>
+          <label>Имя
+            <input type="text" id="cName" autocomplete="name" required>
+          </label>
+          <label>Сообщение
+            <textarea id="cMsg" required></textarea>
+          </label>
+          <input class="hp" type="text" id="cHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit">Отправить</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div>
+        <h4>Damir</h4>
+        <p>I'm Damir and it's my personal web page</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#way">My Way</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a class="soc" href="https://www.tiktok.com/@zzaphkiel12?_r=1&_t=ZS-999NdjxcYtR" target="_blank" rel="noopener" aria-label="TikTok">
+          <img src="tt.png" alt="TikTok">
+        </a>
       </div>
     </div>
-  </div>
+  </footer>
+
+  <script>
+    // Бургер-меню
+    const burger = document.querySelector('.burger');
+    const menu = document.getElementById('menu');
+    burger.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Стрелки слайдера
+    const track = document.getElementById('track');
+    const step = () => track.querySelector('.slide').offsetWidth + 20;
+    document.getElementById('next').onclick = () => track.scrollBy({ left: step(), behavior: 'smooth' });
+    document.getElementById('prev').onclick = () => track.scrollBy({ left: -step(), behavior: 'smooth' });
+
+    // Тема
+    const themeBtn = document.getElementById('themeBtn');
+    const root = document.documentElement;
+    const paintBtn = () => themeBtn.textContent = root.dataset.theme === 'dark' ? '☀️' : '🌙';
+    paintBtn();
+    themeBtn.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paintBtn();
+    });
+
+    // Форма связи: открывает письмо в почтовой программе.
+    // ВАЖНО: впиши сюда свою почту, например 'damir@gmail.com'
+    const EMAIL = '';
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const st = document.getElementById('formStatus');
+      const name = document.getElementById('cName').value.trim();
+      const msg = document.getElementById('cMsg').value.trim();
+      if (document.getElementById('cHp').value) return;
+      if (!name || !msg) { st.textContent = 'Заполни имя и сообщение.'; return; }
+      if (!EMAIL) { st.textContent = 'Почта владельца сайта ещё не указана.'; return; }
+      const body = encodeURIComponent(msg + '\n\n— ' + name);
+      location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Сообщение с сайта от ' + name) + '&body=' + body;
+      st.textContent = 'Открываю почту. Осталось нажать «Отправить» в письме.';
+    });
+
+    // Подсветка пункта меню при прокрутке
+    const links = [...menu.querySelectorAll('a')];
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section, footer').forEach(s => io.observe(s));
+  </script>
 </body>
 </html>
